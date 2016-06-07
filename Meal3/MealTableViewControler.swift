@@ -154,6 +154,7 @@ class MealTableViewControler: UITableViewController {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
     }
     
+    var b = 1
     
 }
 
