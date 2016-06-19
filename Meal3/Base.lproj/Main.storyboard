@@ -7,58 +7,51 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Your Meals-->
+        <!--MealBook-->
         <scene sceneID="PR4-RJ-r3F">
             <objects>
                 <tableViewController id="ZIb-HM-QGp" customClass="MealTableViewControler" customModule="Meal3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8n-Qv-7wm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8n-Qv-7wm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="163" id="mNP-T3-hve" customClass="MealTableViewCell" customModule="Meal3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="163"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="100" id="mNP-T3-hve" customClass="MealTableViewCell" customModule="Meal3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNP-T3-hve" id="sIR-4N-xaC">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="162.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-9B-Log">
-                                            <rect key="frame" x="0.0" y="-219" width="600" height="600"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-9B-Log">
+                                            <rect key="frame" x="0.0" y="-250" width="600" height="600"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="WVP-9B-Log" secondAttribute="height" multiplier="1:1" id="Qfz-FV-07g"/>
+                                                <constraint firstAttribute="width" secondItem="WVP-9B-Log" secondAttribute="height" multiplier="1:1" id="F4A-pP-G4w"/>
                                             </constraints>
                                         </imageView>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-GA-nYy" customClass="RatingControl" customModule="Meal3" customModuleProvider="target">
-                                            <rect key="frame" x="225" y="89" width="151" height="27"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jle-gP-Bpy">
-                                            <rect key="frame" x="78" y="60" width="444" height="21"/>
+                                            <rect key="frame" x="78" y="40" width="444" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-GA-nYy" customClass="RatingControl" customModule="Meal3" customModuleProvider="target">
+                                            <rect key="frame" x="240" y="69" width="120" height="21"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="WVP-9B-Log" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="3J2-yz-LOJ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="WVP-9B-Log" secondAttribute="trailing" id="B4K-jc-N2l"/>
-                                        <constraint firstItem="4NL-GA-nYy" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="KZ9-eF-7iC"/>
-                                        <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" id="MOz-ly-Tgc"/>
-                                        <constraint firstItem="WVP-9B-Log" firstAttribute="leading" secondItem="sIR-4N-xaC" secondAttribute="leadingMargin" id="T3k-Iu-7bs"/>
-                                        <constraint firstItem="WVP-9B-Log" firstAttribute="leading" secondItem="sIR-4N-xaC" secondAttribute="leadingMargin" id="bCY-fH-JOv"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="WVP-9B-Log" secondAttribute="trailing" id="h7E-n9-Sys"/>
-                                        <constraint firstItem="4NL-GA-nYy" firstAttribute="top" secondItem="Jle-gP-Bpy" secondAttribute="bottom" constant="8" id="hWh-NJ-loo"/>
-                                        <constraint firstItem="WVP-9B-Log" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" id="iL4-h5-2d3"/>
-                                        <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="jI7-4x-3Gu"/>
+                                        <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerY" secondItem="WVP-9B-Log" secondAttribute="centerY" id="176-S7-zRU"/>
+                                        <constraint firstItem="WVP-9B-Log" firstAttribute="leading" secondItem="sIR-4N-xaC" secondAttribute="leading" id="3sW-sF-WAX"/>
+                                        <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerX" secondItem="WVP-9B-Log" secondAttribute="centerX" id="828-U8-GU6"/>
+                                        <constraint firstAttribute="trailing" secondItem="WVP-9B-Log" secondAttribute="trailing" id="Gn1-bK-TgN"/>
+                                        <constraint firstItem="4NL-GA-nYy" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="Gzi-qi-oUo"/>
+                                        <constraint firstItem="WVP-9B-Log" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" id="MZv-OJ-utR"/>
+                                        <constraint firstItem="WVP-9B-Log" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="gaT-i9-3Yz"/>
+                                        <constraint firstItem="4NL-GA-nYy" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" constant="30" id="ieL-iW-mHs"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="B4K-jc-N2l"/>
-                                            <exclude reference="bCY-fH-JOv"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="Jle-gP-Bpy" id="Ns4-iF-VS0"/>
                                     <outlet property="photoImageView" destination="WVP-9B-Log" id="e0S-rB-mxo"/>
@@ -72,7 +65,7 @@
                             <outlet property="delegate" destination="ZIb-HM-QGp" id="LVH-Tj-is4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Meals" id="K4H-Ry-eEK">
+                    <navigationItem key="navigationItem" title="MealBook" id="K4H-Ry-eEK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G2t-XV-fD9">
                             <connections>
                                 <segue destination="zEr-ix-CDq" kind="presentation" identifier="AddItem" id="uqc-IM-YgC"/>

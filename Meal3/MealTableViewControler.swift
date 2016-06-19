@@ -20,6 +20,7 @@ class MealTableViewControler: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
         
+        
         // Load any saved meals, otherwise load sample data.
         if let savedMeals = loadMeals() {
             meals += savedMeals
@@ -155,5 +156,27 @@ class MealTableViewControler: UITableViewController {
     }
     
     
+    // Fix the issue that UITableViewCell Seperator not strech to the left edge of screen
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(tableView.respondsToSelector(Selector("setSeparatorInset:"))){
+            
+            tableView.separatorInset = UIEdgeInsetsZero
+        }
+        
+        if(tableView.respondsToSelector(Selector("setLayoutMargins:"))){
+            
+            tableView.layoutMargins = UIEdgeInsetsZero
+        }
+        
+        if(cell.respondsToSelector(Selector("setLayoutMargins:"))){
+            
+            cell.layoutMargins = UIEdgeInsetsZero
+        }
+ 
+    }
+    
+
 }
 
