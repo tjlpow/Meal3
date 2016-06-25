@@ -11,34 +11,33 @@
         <scene sceneID="PR4-RJ-r3F">
             <objects>
                 <tableViewController id="ZIb-HM-QGp" customClass="MealTableViewControler" customModule="Meal3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8n-Qv-7wm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8n-Qv-7wm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="100" id="mNP-T3-hve" customClass="MealTableViewCell" customModule="Meal3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="150" id="mNP-T3-hve" customClass="MealTableViewCell" customModule="Meal3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNP-T3-hve" id="sIR-4N-xaC">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-9B-Log">
-                                            <rect key="frame" x="0.0" y="-250" width="600" height="600"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="WVP-9B-Log" secondAttribute="height" multiplier="1:1" id="F4A-pP-G4w"/>
-                                            </constraints>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-9B-Log">
+                                            <rect key="frame" x="0.0" y="0.0" width="490" height="93"/>
                                         </imageView>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-GA-nYy" customClass="RatingControl" customModule="Meal3" customModuleProvider="target">
+                                            <rect key="frame" x="239" y="69" width="123" height="24"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jle-gP-Bpy">
                                             <rect key="frame" x="78" y="40" width="444" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-GA-nYy" customClass="RatingControl" customModule="Meal3" customModuleProvider="target">
-                                            <rect key="frame" x="240" y="69" width="120" height="21"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerY" secondItem="WVP-9B-Log" secondAttribute="centerY" id="176-S7-zRU"/>
@@ -46,11 +45,13 @@
                                         <constraint firstItem="Jle-gP-Bpy" firstAttribute="centerX" secondItem="WVP-9B-Log" secondAttribute="centerX" id="828-U8-GU6"/>
                                         <constraint firstAttribute="trailing" secondItem="WVP-9B-Log" secondAttribute="trailing" id="Gn1-bK-TgN"/>
                                         <constraint firstItem="4NL-GA-nYy" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="Gzi-qi-oUo"/>
+                                        <constraint firstItem="WVP-9B-Log" firstAttribute="height" secondItem="sIR-4N-xaC" secondAttribute="height" id="MGk-Cx-koL"/>
                                         <constraint firstItem="WVP-9B-Log" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" id="MZv-OJ-utR"/>
                                         <constraint firstItem="WVP-9B-Log" firstAttribute="centerX" secondItem="sIR-4N-xaC" secondAttribute="centerX" id="gaT-i9-3Yz"/>
                                         <constraint firstItem="4NL-GA-nYy" firstAttribute="centerY" secondItem="sIR-4N-xaC" secondAttribute="centerY" constant="30" id="ieL-iW-mHs"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="Jle-gP-Bpy" id="Ns4-iF-VS0"/>
@@ -67,6 +68,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="MealBook" id="K4H-Ry-eEK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G2t-XV-fD9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="zEr-ix-CDq" kind="presentation" identifier="AddItem" id="uqc-IM-YgC"/>
                             </connections>
@@ -133,11 +135,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="X9z-xQ-1Tu">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mDK-Ni-pYo">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="4cW-oy-Wkh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="IlW-Ex-Zch">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="5b0-Lk-wxu" kind="unwind" unwindAction="unwindToMealList:" id="nvQ-Et-gj4"/>
                             </connections>
@@ -166,7 +170,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vt3-xO-bh6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="unn-2x-4fc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="unn-2x-4fc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -202,6 +206,6 @@
         <image name="defaultImage" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tsy-y3-9Xv"/>
+        <segue reference="4Fz-10-TiQ"/>
     </inferredMetricsTieBreakers>
 </document>

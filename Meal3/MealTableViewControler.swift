@@ -14,11 +14,18 @@ class MealTableViewControler: UITableViewController {
     
     var meals = [Meal]()
     
+    /* outlet for image filter
+    var context: CIContext!
+    var filter: CIFilter!
+    var beginImage: CIImage!
+    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         
         
         // Load any saved meals, otherwise load sample data.
@@ -29,6 +36,7 @@ class MealTableViewControler: UITableViewController {
             loadSampleMeals()
         }
         
+      
     }
     
     func loadSampleMeals() {
@@ -69,6 +77,22 @@ class MealTableViewControler: UITableViewController {
         
         let meal = meals[indexPath.row]
         
+        
+        /*Add Image Filter through Core Image
+        
+        beginImage = CIImage(image: meal.photo!)
+        filter = CIFilter(name: "CISepiaTone")
+        
+        filter!.setValue(beginImage, forKey: kCIInputImageKey)
+        filter!.setValue(0.5, forKey: kCIInputIntensityKey)
+        
+        context = CIContext(options:nil)
+        
+        let outputImage = filter.outputImage
+        let cgimg = context.createCGImage(outputImage!, fromRect: outputImage!.extent)
+        let newImage = UIImage(CGImage: cgimg)
+        */
+    
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.photo
         cell.ratingControl.rating = meal.rating
@@ -157,7 +181,7 @@ class MealTableViewControler: UITableViewController {
     
     
     // Fix the issue that UITableViewCell Seperator not strech to the left edge of screen
-    
+    /*
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if(tableView.respondsToSelector(Selector("setSeparatorInset:"))){
@@ -176,7 +200,7 @@ class MealTableViewControler: UITableViewController {
         }
  
     }
-    
+    */
 
 }
 
